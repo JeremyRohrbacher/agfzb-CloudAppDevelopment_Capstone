@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Dealership Review</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -13,12 +13,8 @@
     <script src="https://unpkg.com/bootstrap-table@1.18.2/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 
 </head>
-    
-    
-    <body>
-    
-     This is the index page of your Django app!
-    <!--Add a nav bar here -->
+
+<body>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -32,13 +28,25 @@
                     <a class="btn btn-link" href="#">{{ user.first_name }}({{ user.username }})</a>
                     <a class="btn btn-link" href="{% url 'djangoapp:logout' %}">Logout</a>
                 </li>
+                {% else %}
 
                 {% endif %}
             </ul>
         </div>
     </nav>
-    <!--Add a dealer table here -->
-
-    </body>
+    <div class="container">
+        <p class="mt-7 h1 text-left">
+            Contacts information
+        </p>
+        <div class="mt-7 h2 text-left">
+            <ul><b>Phone No:</b> 555 30191575</ul>
+            <ul><b>Email:</b>
+                <a href="mailto:jermjerm@hotmail.com">Jeremy's Email</a>
+            </ul>
+            <ul><b>Personal Web: </b><a herf="https://github.com/JeremyRohrbacher/agfzb-CloudAppDevelopment_Capstone">Jeremy's Github</a>
+            </ul>
+        </div>
+    </div>
+</body>
 
 </html>
